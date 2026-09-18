@@ -1,0 +1,16 @@
+# R session artifacts and history
+.Rproj.user/
+.Rhistory
+.RData
+.RData*
+.Ruserdata
+
+# Ignore local datasets & script CSV outputs
+*.csv
+*.tsv
+Final Data.csv
+Processed_Brand_Lift_Results.csv
+
+# Execution outputs
+*.Rout
+*.tmp

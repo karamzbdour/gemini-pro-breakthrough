@@ -1,0 +1,6 @@
+# Processed CSV metrics and generated presentation files
+*.csv text eol=lf
+*.pdf binary
+.gitignore text eol=lf
+.gitattributes text eol=lf
+

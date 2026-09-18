@@ -1,0 +1,5 @@
+# Ignore all raw datasets and challenge documents for copyright reasons
+*
+!.gitignore
+!.gitattributes
+!.gitkeep

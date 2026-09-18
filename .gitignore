@@ -1,0 +1,51 @@
+# History sources and databases
+.Rhistory
+.RData
+.RData*
+.Ruserdata
+
+# RStudio project files
+.Rproj.user/
+
+# macOS / Windows system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# IDE & editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary & cache files
+*.tmp
+*.temp
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+
+# Raw & Processed Data (excluded due to copyright/licensing)
+Data/Raw Data/*
+!Data/Raw Data/.gitignore
+!Data/Raw Data/.gitattributes
+!Data/Raw Data/.gitkeep
+
+Data/Processed Data/*
+!Data/Processed Data/.gitignore
+!Data/Processed Data/.gitattributes
+!Data/Processed Data/.gitkeep
+
+# Exclude all data files across repository
+*.csv
+*.tsv
+*.xlsx
+*.xls

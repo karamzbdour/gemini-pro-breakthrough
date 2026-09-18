@@ -1,0 +1,7 @@
+# Data files handling
+*.csv text eol=lf
+*.tsv text eol=lf
+*.pdf binary
+.gitignore text eol=lf
+.gitattributes text eol=lf
+

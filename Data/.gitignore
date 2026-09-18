@@ -1,0 +1,21 @@
+# Ignore all raw and processed data contents due to copyright
+Raw Data/*
+!Raw Data/.gitignore
+!Raw Data/.gitattributes
+!Raw Data/.gitkeep
+
+Processed Data/*
+!Processed Data/.gitignore
+!Processed Data/.gitattributes
+!Processed Data/.gitkeep
+
+# Exclude any data formats
+*.csv
+*.tsv
+*.xlsx
+*.xls
+~$*
+*.tmp
+*.temp
+*.crdownload
+*.bak

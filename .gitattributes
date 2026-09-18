@@ -1,0 +1,36 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# R and script files
+*.R text eol=lf
+*.r text eol=lf
+*.Rproj text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+
+# Documentation & web files
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# Data files (text with LF line endings)
+*.csv text eol=lf
+*.tsv text eol=lf
+
+# Binary files (do not normalize line endings or diff as text)
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.RData binary
+*.rda binary
+*.rds binary
+*.zip binary
+*.tar.gz binary
+
