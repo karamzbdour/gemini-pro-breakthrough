@@ -45,11 +45,17 @@ Data analytics pipeline and strategy presentation developed for Google's Gemini 
 Filters survey noise via a **two-proportion $Z$-test** ($\alpha = 0.05$) to isolate genuine consideration lift:
 
 * **Pooled Proportion ($\hat{p}$)**:
+
   $$\hat{p} = \frac{X_{\text{control}} + X_{\text{exposed}}}{N_{\text{control}} + N_{\text{exposed}}}$$
+
 * **Standard Error ($\text{SE}$)**:
+
   $$\text{SE} = \sqrt{\hat{p}(1 - \hat{p}) \left(\frac{1}{N_{\text{control}}} + \frac{1}{N_{\text{exposed}}}\right)}$$
+
 * **$Z$-Score & Two-Tailed $p$-Value**:
-  $$Z = \frac{p_{\text{exposed}} - p_{\text{control}}}{\text{SE}}, \quad p = 2 \times (1 - \Phi(|Z|))$$
+
+  $$Z = \frac{p_{\text{exposed}} - p_{\text{control}}}{\text{SE}}, \quad p = 2 \times (1 - \Phi(\vert{}Z\vert{}))$$
+
 * **Significance Filter ($p < 0.05$)**: Discards non-significant cohorts ($p \ge 0.05$). All dropped cohorts were Display campaigns in UK/DE.
 
 ### Phase 2: Relational Data Integration (`BrandLifts&CampaignsMerge.R`)
@@ -58,18 +64,27 @@ Inner joins significant lifts with historical performance metrics on composite k
 ### Phase 3: Financial Normalisation & Unit Economics
 Derives **Cost Per Lifted User (CPLU)** across all validated campaigns:
 
-* **Absolute Lift**: $\text{Abs\_Lift} = p_{\text{exposed}} - p_{\text{control}}$
-* **Lift Volume**: $\text{LiftVolume} = \text{Abs\_Lift} \times \text{Reach}$
+* **Absolute Lift**: 
+
+  $$\text{Absolute Lift} = p_{\text{exposed}} - p_{\text{control}}$$
+
+* **Lift Volume**: 
+
+  $$\text{Lift Volume} = \text{Absolute Lift} \times \text{Reach}$$
+
 * **FX Conversion (USD $\rightarrow$ GBP)**:
+
   $$\text{Spend}_{\text{GBP}} = \text{Spend}_{\text{USD}} \times \text{Rate} \quad (\text{2021: } 0.73, \text{ 2022: } 0.81, \text{ 2023: } 0.80, \text{ 2024: } 0.79)$$
+
 * **Cost Per Lifted User (CPLU)**:
-  $$\text{CPLU} = \frac{\text{Spend}_{\text{GBP}}}{\text{LiftVolume}}$$
+
+  $$\text{CPLU} = \frac{\text{Spend}_{\text{GBP}}}{\text{Lift Volume}}$$
 
 ---
 
 ## Repository Structure
 
-```
+```text
 ├── README.md
 ├── docs/
 │   ├── Gemini_Pro_Breakthrough_Presentation.pdf   # Full presentation slide deck (PDF)
