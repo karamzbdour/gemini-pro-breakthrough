@@ -61,7 +61,7 @@ Filters survey noise via a **two-proportion $Z$-test** ($\alpha = 0.05$) to isol
 ### Phase 2: Relational Data Integration (`BrandLifts&CampaignsMerge.R`)
 Inner joins significant lifts with historical performance metrics on composite keys: `Campaign_Name`, `Market`, and `Channel`.
 
-### Phase 3: Financial Normalisation & Unit Economics
+### Phase 3: Unit Economics
 Derives **Cost Per Lifted User (CPLU)** across all validated campaigns:
 
 * **Absolute Lift**: 
@@ -71,10 +71,6 @@ Derives **Cost Per Lifted User (CPLU)** across all validated campaigns:
 * **Lift Volume**: 
 
   $$\text{Lift Volume} = \text{Absolute Lift} \times \text{Reach}$$
-
-* **FX Conversion (USD $\rightarrow$ GBP)**:
-
-  $$\text{Spend}_{\text{GBP}} = \text{Spend}_{\text{USD}} \times \text{Rate} \quad (\text{2021: } 0.73, \text{ 2022: } 0.81, \text{ 2023: } 0.80, \text{ 2024: } 0.79)$$
 
 * **Cost Per Lifted User (CPLU)**:
 
